@@ -14,7 +14,7 @@ const dailyFood = require("./Db_Models/DailyFoods");
 const recommendFood=require("./Db_Models/Recomendation");
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow only this origin
+    origin: "asquare-q3uwg6wsx-anish-kumars-projects-a92a48e4.vercel.app", // Allow only this origin
   })
 );
 app.use(express.json());
