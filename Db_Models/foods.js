@@ -467,6 +467,43 @@ const indianFoods = [
   "Paneer Pasanda",
   "Chana Chole",
 ];
+const foodItems = [
+    // Fruits
+    "Apple", "Banana", "Orange", "Mango", "Grapes", "Pineapple", "Strawberry", "Blueberry", "Raspberry", "Blackberry",
+    "Watermelon", "Cantaloupe", "Honeydew Melon", "Kiwi", "Papaya", "Peach", "Plum", "Apricot", "Cherry", "Pomegranate",
+    "Fig", "Guava", "Pear", "Lychee", "Dragon Fruit", "Coconut", "Passion Fruit", "Jackfruit", "Avocado", "Cranberry",
+    "Mulberry", "Starfruit", "Persimmon", "Gooseberry", "Tamarind", "Date", "Jujube", "Cactus Pear", "Custard Apple",
+    "Longan", "Sapodilla", "Ugli Fruit", "Durian", "Feijoa", "Breadfruit", "Mangosteen", "Nectarine", "Elderberry",
+ "Boysenberry", "Cloudberry",  "Rambutan", "Ackee",
+    
+    // Dry Fruits & Nuts
+    "Almonds", "Cashews", "Walnuts", "Pistachios", "Hazelnuts", "Macadamia Nuts", "Brazil Nuts", "Pine Nuts",
+    "Pecans", "Chestnuts", "Peanuts", "Sunflower Seeds", "Pumpkin Seeds", "Chia Seeds", "Flax Seeds", "Sesame Seeds",
+    "Watermelon Seeds", "Lotus Seeds", "Coconut Flakes", "Dried Apricots", "Dried Figs", "Dried Dates", "Raisins",
+    "Sultanas", "Currants", "Prunes", "Dried Cranberries", "Dried Blueberries", "Dried Goji Berries", "Dried Mulberries",
+    "Dried Mango", "Dried Pineapple", "Dried Papaya", "Dried Banana Chips", "Dried Apple Slices", "Dried Pears",
+    "Dried Cherries", "Dried Blackberries", "Dried Raspberries", "Dried Starfruit", "Dried Kiwi", "Dried Persimmon",
+    "Dried Coconut", "Dried Lychee", "Dried Longan", "Dried Gooseberries", "Dried Jackfruit",
+     "Dried Tamarind", "Dried Elderberries", "Dried Olive", "Dried Prickly Pear",
+     "Dried Cranberry Hibiscus", "Dried Jujube", "Dried Sapodilla", "Dried Rambutan",
+    "Dried Ackee", "Dried Cloudberry",
+  
+    // Milk & Dairy Products
+    "Milk", "Whole Milk", "Skimmed Milk", "Low-Fat Milk", "Almond Milk", "Soy Milk", "Coconut Milk", "Oat Milk",
+    "Rice Milk", "Cashew Milk", "Goat Milk", "Buffalo Milk", "Camel Milk", "Yak Milk", "Sheep Milk",
+    "Condensed Milk", "Evaporated Milk", "Powdered Milk", "Flavored Milk", "Chocolate Milk", "Strawberry Milk",
+    "Vanilla Milk", "Banana Milk", "Coffee Milk", "Kefir", "Buttermilk", "Lassi", "Paneer", "Cheese", "Cottage Cheese",
+    "Ricotta Cheese", "Mozzarella Cheese", "Cheddar Cheese", "Parmesan Cheese", "Swiss Cheese", "Brie Cheese",
+    "Gouda Cheese", "Blue Cheese", "Feta Cheese", "Cream Cheese", "Provolone Cheese", "Gruyère Cheese", "Monterey Jack Cheese",
+    "Pepper Jack Cheese", "Camembert Cheese", "Colby Cheese", "Havarti Cheese", "Manchego Cheese", "Roquefort Cheese",
+    "Gorgonzola Cheese", "Edam Cheese", "Limburger Cheese", "Queso Fresco", "Mascarpone", "Halloumi", "Burrata",
+    "Yogurt", "Greek Yogurt", "Frozen Yogurt", "Curd", "Sour Cream", "Butter", "Ghee",
+    "Whipped Cream", "Clotted Cream", "Milk Powder", "Custard", "Milkshake", "Ice Cream", "Whey Protein",
+    "Casein Protein", "Milk Pudding", "Dulce de Leche", "Sweetened Condensed Milk", "Caramelized Milk", "Milk Chocolate",
+     "Milk Tea", "Bubble Tea", "Turmeric Milk", "Golden Milk", "Horchata", "Eggnog",
+    "Traditional Buttermilk", "Soft Cheese", "Hard Cheese", "Artisan Cheese", "Processed Cheese"
+  ];
+  
 const data = [
   { attr_id: 301, name: "Calcium" },
   { attr_id: 205, name: "Carbohydrate" },
@@ -1051,8 +1088,8 @@ const processFoodItem = async (item) => {
 
 const main = async () => {
     await connectDB();
-    for (let i = 448; i < 449; i++) {
-        const item = indianFoods[i];
+    for (let i = 0; i < 200; i++) {
+        const item = foodItems[i];
         await processFoodItem(item);
          // Add delay between requests
       }
