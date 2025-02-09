@@ -14,9 +14,12 @@ const dailyFood = require("./Db_Models/DailyFoods");
 const recommendFood=require("./Db_Models/Recomendation");
 app.use(
   cors({
-    origin: "https://asquare-q3uwg6wsx-anish-kumars-projects-a92a48e4.vercel.app",
+    origin: [
+      "https://asquare-q3uwg6wsx-anish-kumars-projects-a92a48e4.vercel.app",
+      "https://asquare-nine.vercel.app",
+    ],
     methods: "GET,POST,PUT,DELETE",
-    credentials: true, // Allow cookies if needed
+    credentials: true,
   })
 );
 app.use(express.json());
