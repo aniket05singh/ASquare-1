@@ -1,40 +1,28 @@
-ASquare - Smart Nutrient Tracker
+# **ASquare**  
 
-🚀 Live Website: asquare-nine.vercel.app
+### 🌐 [Live Website](https://asquare-nine.vercel.app)  
 
-📌 Overview
+## 🚀 **About the Project**  
+ASquare is a **nutrition tracking** web app that helps users log their daily food intake, **detect nutrient deficiencies**, and **get personalized dietary recommendations** to maintain a balanced diet.  
 
-ASquare is a web application that helps users track their daily food intake and detect nutrient deficiencies. Based on their diet history, it provides personalized food recommendations to help users maintain a balanced diet.
+## 🔥 **Features**  
+✅ **Food Intake Logging** – Track what you eat daily  
+✅ **Nutrient Analysis** – Identify deficiencies in essential vitamins and minerals  
+✅ **Personalized Recommendations** – Get food suggestions to improve your diet  
+✅ **Interactive Dashboard** – View intake trends with visually engaging charts  
 
-🎯 Features
+## 🛠 **Technologies Used**  
+- **Frontend**: [React.js](https://react.dev), [Tailwind CSS](https://tailwindcss.com), [GSAP](https://greensock.com/gsap/)  
+- **Backend**: [Express.js](https://expressjs.com/), [Node.js](https://nodejs.org/), [MongoDB](https://www.mongodb.com/)  
+- **Authentication**: [Firebase](https://firebase.google.com/)  
 
-Log daily food intake easily
-
-Automatic detection of nutrient deficiencies
-
-Personalized food recommendations
-
-Interactive dashboard with intuitive data visualization
-
-🛠 Technologies Used
-
-Express.js, MongoDB, Mongoose, React.js, Tailwind CSS, Vercel, Render, Firebase Authentication, GSAP
-
-🐞 Challenges & Solutions
-
-One of the major hurdles was handling CORS errors when deploying the backend on Render and the frontend on Vercel. We solved this by properly configuring CORS in the backend and ensuring that all allowed origins were specified correctly.
-
-📖 How to Use
-
-Sign up/Login using your Google account.
-
-Enter your daily food intake with quantities.
-
-View nutrient analysis based on your data.
-
-Get personalized recommendations for a balanced diet.
-
-📬 Feedback & Contributions
-
-We welcome feedback and contributions! Feel free to open issues or submit pull requests.
-
+## 🐞 **Challenges Faced & Solutions**  
+### **CORS Policy Issue**  
+While integrating the backend with the frontend hosted on different platforms, **CORS errors** blocked API requests. The solution was to properly configure CORS middleware in Express:  
+```js
+const cors = require("cors");
+app.use(cors({ 
+  origin: "https://asquare-nine.vercel.app",
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true 
+}));
