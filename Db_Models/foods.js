@@ -896,10 +896,7 @@ const makeNutritionixRequest = (item) => {
       url: "https://trackapi.nutritionix.com/v2/natural/nutrients",
       headers: {
         "Content-Type": "application/json",
-        "x-app-id": "29d5428d",
-        "x-app-key": "ac6e713391bfb126e583b2a8251f5065",
-        // "x-app-id": "1ebff491",//anish
-        // "x-app-key": "a95ebbb5ca84cc23b014668f33ea8f91",//anish
+        
       },
       body: JSON.stringify({ query: item }),
     };

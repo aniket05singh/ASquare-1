@@ -27,7 +27,7 @@ app.use(express.json());
 async function generateContent(foodItem) {
   // Initialize the Generative AI model
   const genAI = new GoogleGenerativeAI(
-    "AIzaSyAKp30PKXghzkt5DBLi94nqWXWCUP-VpSw"
+   
   );
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   console.log(foodItem);
